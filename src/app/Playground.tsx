@@ -42,7 +42,7 @@ export default function Playground() {
           ))}
         </div>
       </div>
-      <div className="flex-1 h-full overflow-y-scroll">
+      <div className="h-full overflow-y-scroll py-2" style={{ flex: 2 }}>
         {res && <ReactJson src={res} />}
       </div>
     </div>
