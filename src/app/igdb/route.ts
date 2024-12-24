@@ -41,5 +41,9 @@ export async function POST(req: NextRequest) {
     body: query,
   });
   const json = await res.json();
-  return NextResponse.json(json);
+  const headers = res.headers;
+  return NextResponse.json({
+    headers: Object.fromEntries(headers.entries()),
+    body: json,
+  });
 }

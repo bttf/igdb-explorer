@@ -27,7 +27,10 @@ const IGDBRequestBox = ({
         }),
       });
       const json = await res.json();
-      onResponse(json);
+      onResponse({
+        headers: json.headers,
+        body: json.body,
+      });
     } catch (e) {
       console.error(e);
     } finally {
